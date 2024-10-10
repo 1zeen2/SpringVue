@@ -17,8 +17,7 @@ public class ChefDAO {
   		+ "WHERE chef=(SELECT chef FROM recipe WHERE hit=(SELECT MAX(hit) FROM recipe))")
         public ChefVO chefToday();
    */
-  public ChefVO chefToday()
-  {
+  public ChefVO chefToday() {
 	  return mapper.chefToday();
   }
 }
