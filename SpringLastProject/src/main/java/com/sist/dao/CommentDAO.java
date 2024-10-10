@@ -114,8 +114,7 @@ public class CommentDAO {
 		 +"(SELECT NVL(MAX(group_id)+1,1) FROM spring_comment),#{type})")
        public void replyInsert(CommentVO vo);
    */
-  public void commentInsert(CommentVO vo)
-  {
+  public void commentInsert(CommentVO vo) {
 	  mapper.foodReplyIncrement(vo.getRno());
 	  mapper.commentInsert(vo);
   }
